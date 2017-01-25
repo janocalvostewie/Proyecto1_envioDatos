@@ -12,6 +12,8 @@ import android.widget.RadioButton;
 
 public class configuracion extends AppCompatActivity {
 
+    private Intent i;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,7 @@ public class configuracion extends AppCompatActivity {
      */
     public void Enviar(View v){
 
-        Intent i =new Intent(this, MainActivity.class);
+        i =getIntent();
         String color ="";
 
 
@@ -51,7 +53,7 @@ public class configuracion extends AppCompatActivity {
         else if(estado4 == true){color="azul";}
         else{color="0";}
         i.putExtra("color", color);
-        startActivity(i);
+        setResult(RESULT_OK,i);
         finish();
 
     }
