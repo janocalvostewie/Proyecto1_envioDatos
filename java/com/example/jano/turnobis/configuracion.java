@@ -27,7 +27,12 @@ public class configuracion extends AppCompatActivity {
         return true;
     }
 
+    /*
+    *Método onclick que generará un intent a la Main_Activity
+    * Este intent enviará un String dependiendo del RadioButton seleccionado
+     */
     public void Enviar(View v){
+
         Intent i =new Intent(this, MainActivity.class);
         String color ="";
 
@@ -40,10 +45,11 @@ public class configuracion extends AppCompatActivity {
         boolean estado3 = rd3.isChecked();
         RadioButton rd4 = (RadioButton)findViewById(R.id.rbAzul);
         boolean estado4 = rd4.isChecked();
-        if(estado1 == true){color="v";}
-        if(estado2 == true){color="a";}
-        if(estado3 == true){color="r";}
-        if(estado4 == true){color="z";}
+        if(estado1 == true){color="verde";}
+        else if(estado2 == true){color="amarillo";}
+        else if(estado3 == true){color="rojo";}
+        else if(estado4 == true){color="azul";}
+        else{color="0";}
         i.putExtra("color", color);
         startActivity(i);
         finish();
