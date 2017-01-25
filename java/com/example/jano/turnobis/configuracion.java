@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RadioButton;
 
 public class configuracion extends AppCompatActivity {
 
@@ -25,22 +26,28 @@ public class configuracion extends AppCompatActivity {
 
         return true;
     }
-/*
-    public boolean onOptionsItemSelected(MenuItem item) {
 
-        int id = item.getItemId();
+    public void Enviar(View v){
+        Intent i =new Intent(this, MainActivity.class);
+        String color ="";
 
-        if (id == R.id.confi) {
-            Intent i = new Intent(this, configuracion.class );
-            startActivity(i);
-        }
-        else if (id == R.id.inicio){
-            Intent i = new Intent(this, MainActivity.class );
-            startActivity(i);
-        }
 
-        return super.onOptionsItemSelected(item);
-        }*/
+        RadioButton rd1 = (RadioButton)findViewById(R.id.rbVerde);
+        boolean estado1 = rd1.isChecked();
+        RadioButton rd2 = (RadioButton)findViewById(R.id.rbAmarillo);
+        boolean estado2 = rd2.isChecked();
+        RadioButton rd3 = (RadioButton)findViewById(R.id.rbRojo);
+        boolean estado3 = rd3.isChecked();
+        RadioButton rd4 = (RadioButton)findViewById(R.id.rbAzul);
+        boolean estado4 = rd4.isChecked();
+        if(estado1 == true){color="v";}
+        if(estado2 == true){color="a";}
+        if(estado3 == true){color="r";}
+        if(estado4 == true){color="z";}
+        i.putExtra("color", color);
+        startActivity(i);
+        finish();
 
+    }
 
 }

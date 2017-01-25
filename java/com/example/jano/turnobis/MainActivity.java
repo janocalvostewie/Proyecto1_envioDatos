@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -14,7 +15,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
+        String coloricillo = getIntent().getStringExtra("color");
+        TextView tv =(TextView) findViewById(R.id.tv1);
+        tv.setText(coloricillo);
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -38,9 +44,7 @@ public class MainActivity extends AppCompatActivity {
         else if (id == R.id.inicio){
             Intent i = new Intent(this, MainActivity.class );
             startActivity(i);
-        }
-        else if (id == R.id.consultas) {
-
+            finish();
         }
 
 

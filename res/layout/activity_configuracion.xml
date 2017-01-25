@@ -9,14 +9,59 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jano.turnobis.configuracion">
-
-
-    <fragment
+    <TextView
+        android:text="Elija el color de Fondo:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.example.jano.turnobis.fconfiguracion"
-        android:id="@+id/fragment"
-        tools:layout="@layout/fragment_fconfiguracion"
+        android:id="@+id/tvcolor"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:text="Amarillo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvcolor"
+        android:layout_alignEnd="@+id/tvcolor"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rbAmarillo" />
+
+    <RadioButton
+        android:text="Azul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbAmarillo"
+        android:layout_alignStart="@+id/rbAmarillo"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rbAzul" />
+
+    <RadioButton
+        android:text="Rojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rbAmarillo"
+        android:layout_toEndOf="@+id/rbAmarillo"
+        android:layout_marginStart="26dp"
+        android:id="@+id/rbRojo" />
+
+    <RadioButton
+        android:text="Verde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rbVerde"
+        android:layout_alignBaseline="@+id/rbAzul"
+        android:layout_alignBottom="@+id/rbAzul"
+        android:layout_alignStart="@+id/rbRojo" />
+
+    <Button
+        android:text="Aceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="79dp"
+        android:id="@+id/bAceptar"
+        android:layout_below="@+id/rbVerde"
+        android:layout_toEndOf="@+id/rbAmarillo"
+        android:onClick="Enviar"/>
+
 </RelativeLayout>
