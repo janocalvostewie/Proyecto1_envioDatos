@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TurnoBis</string>
+    <string name="confi">Configuración</string>
+    <string name="inicio">Inicio</string>
+    <string name="adias">Añadir Días</string>
+    <string name="edias">Eliminar Días</string>
+    <string name="consultas">Consultas</string>
+
+   <string-array name="colorcillos">
+       <item>Azul Marismas</item>
+       <item>Amarillo Templanza</item>
+       <item>Verde Musgo</item>
+       <item>Naranja Otoño</item>
+       <item>Blanco Nuclear</item>
+   </string-array>
+</resources>
